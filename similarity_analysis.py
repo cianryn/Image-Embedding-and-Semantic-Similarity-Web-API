@@ -17,11 +17,9 @@ response = requests.post(url, files=files) # Send the POST request with the imag
 for _, file_tuple in files:
     file_tuple.close() # Close files
 
-
 # Extract FastAPI responses
 response = response.json()
 api_message = response["message"]
-print(api_message)
 predictions = response["predictions"]
 embeddings = response["embeddings"]
 
@@ -44,6 +42,7 @@ sorted_similarities = sorted(similarities.items(), key=lambda item: item[1])[::-
 
 
 ## Display top 10 similar results
+print(api_message)
 sorted_similarities = sorted_similarities[0:10]
 headers = ["Reference Image", "Image Classification"]
 table = [(args.ref_image, predictions[args.ref_image])]
