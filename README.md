@@ -26,11 +26,27 @@ Optional parameters include: </br>
 
 ## Example Output
 
-## Possible Improvements
+## Applications
+
+1. Image Search Engines
+    * By comparing embeddings, search engines can find images similar to a query image. This is useful in reverse image search applications where the goal is to find images that are visually similar to a given image.
+2. Content-Based Image Retrieval (CBIR)
+    * CBIR systems use image embeddings to enable searching and retrieving images from large databases based on content similarity rather than metadata or tags. This is widely used in digital libraries, stock photo databases, and e-commerce for product search.
+3. Recommendation Systems
+    * E-commerce and social media platforms use image similarity to recommend visually similar products or content to users. For example, fashion retailers suggest items similar to what a user is viewing, enhancing user engagement and potential sales.
+4. Duplicate Detection
+    * Image similarity can identify duplicate or near-duplicate images within a dataset, helping clean up databases by removing redundant information. This is crucial for maintaining the efficiency and accuracy of image-based systems.
+5. Face Recognition and Verification
+    * By extracting and comparing facial features, systems can recognize individuals across different images. This technology underpins security systems, personalized experiences in tech products, and tools for organizing photos based on who is in them.
+6. Medical Image Analysis
+    * In healthcare, CNN embeddings can help compare and analyze medical images, such as X-rays or MRI scans, to identify patterns, anomalies, or disease markers by referencing similar cases from a medical image database.
+
+## Possible Improvements 
+- [ ] Mercury
 - [x] Include network classification predicitons to better understand similarity measurements
-- [] Explore other similarity metrics
-- [] Explore alternative CNN's for improved embeddings
-- [] Create Vector database for already seen images to improve efficiency
+- [ ] Explore other similarity metrics
+- [ ] Explore alternative CNN's for improved embeddings
+- [ ] Create Vector database for already seen images to improve efficiency
 
 
 
