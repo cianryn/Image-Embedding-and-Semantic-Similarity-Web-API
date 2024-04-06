@@ -39,12 +39,10 @@ Optional parameters include: </br>
 
 ## Example Run
 From the above command lines, the output will be: </br>
-> 
->
->
+![image info](./example/fastapi_similarity_output.JPG)
+
 
 ## Applications
-
 1. Image Search Engines
 2. Content-Based Image Retrieval (CBIR)
 3. Recommendation Systems

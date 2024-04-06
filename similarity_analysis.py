@@ -12,9 +12,7 @@ args = parser.parse_args(args=[])
 
 url = 'http://0.0.0.0:8080/upload-images/' # The URL of the FastAPI endpoint 
 image_paths = glob(args.images_folder + "/*") # Paths to the image files 
-print(image_paths)
 files = [('files', (open(image_path, 'rb'))) for image_path in image_paths] # Prepare files in requests format
-print(files)
 response = requests.post(url, files=files) # Send the POST request with the image files
 for _, file_tuple in files:
     file_tuple.close() # Close files
