@@ -2,10 +2,19 @@
 Web API and a client application that leverages a pre-trained CNN from pytorch to generate image embeddings which are then used for semantic similarity analysis. </br>
 The project is split into 2 components: </br>
 1. FastAPI that takes multiple images and provide image embeddings and image classification predictinos. </br>
+    - Image embeddings are extracted from a pretrained ResNet18 trained on ImagNet.
+    - The fastAPI web service is containerized using docker.
+    - The application take multiple images and returns embeddings for each image. 
+    - Image classification predictions are also returned. 
 2. Command line client script that computes the similarity between a reference images and a list of images. </br>
+    - Python script takes a reference image and folder containing all other images as input.
+    - Requests are sent to the FastAPI above which returns embeddings for all images including reference. 
+    - Cosine similarity is used to determine similarity between images embedding vectors.
+    - Top 10 closest images are returned with similarity scores and image classification results. 
 
 ## Requirements
 
+* Python==3.10.13
 * fastapi==0.78.0
 * uvicorn==0.17.6
 * python-multipart==0.0.5
