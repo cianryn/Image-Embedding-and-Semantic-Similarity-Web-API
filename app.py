@@ -38,7 +38,7 @@ async def create_upload_files(files: List[UploadFile] = File(...)):
 
             ## Perform embedding hook
             def hook_layer(module, inputs, output):
-                embeddings[file.filename] = output.data[0,:,0,0].detach().numpy()
+                embeddings[file.filename] = output.data[0,:,0,0].detach().tolist()
             hook = layer.register_forward_hook(hook_layer) ## Attach hook to avgpool layer
             with torch.no_grad():
                 out = model(im) # Perform a forward pass. The hook function will run automatically
