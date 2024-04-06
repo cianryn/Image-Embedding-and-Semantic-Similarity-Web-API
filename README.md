@@ -20,13 +20,14 @@ Or run `pip install -r requirements.txt` </br>
 
 ### FastAPI Web Service
 FastAPI is run on docker. To create docker image and run docker container, run the following command lines: </br> 
-`docker build -t fastapi-image-embeddings .` (may take a few mintes) </br>
-`docker run -p 8080:8080 fastapi-image-embeddings` (port 8080 is exposed) </br> 
+> `docker build -t fastapi-image-embeddings .` (may take a few mintes) </br>
+> `docker run -p 8080:8080 fastapi-image-embeddings` (port 8080 is exposed) </br> 
 
 ### Image Similarity Analysis
 To compute similarity against reference image, run the following command: </br> 
-`pip install -r requirements.txt` </br> 
-`python similarity_analysis.py` </br> 
+> `pip install -r requirements.txt` </br> 
+> `python similarity_analysis.py` </br>
+
 Last line sends request to FastAPI image embeddings service and receives a json with keys **["message", "predictions", "embeddings"]** </br>
 "embeddings" are used for similarity analysis. 
 
