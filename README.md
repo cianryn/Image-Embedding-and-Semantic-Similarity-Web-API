@@ -9,7 +9,7 @@ The project is split into 2 components: </br>
 2. Command line client script that computes the similarity between a reference images and a list of images. </br>
     - Python script takes a reference image and folder containing all other images as input.
     - Requests are sent to the FastAPI above which returns embeddings for all images including reference. 
-    - Cosine similarity is used to determine similarity between images embedding vectors.
+    - Cosine similarity is used to determine similarity between image embedding vectors.
     - Top 10 closest images are returned with similarity scores and image classification results. 
 
 ## Requirements
