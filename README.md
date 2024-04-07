@@ -23,6 +23,7 @@ The project is split into 2 components: </br>
 * torchvision==0.17.1
 * tabulate==0.9.0
 * requests==2.31.0
+* numpy
 * argparse
 * glob
 
@@ -31,7 +32,7 @@ The project is split into 2 components: </br>
 
 ### FastAPI Web Service
 FastAPI is run on docker. To create docker image and run docker container, run the following command lines: </br> 
-> `cd app`
+> `cd app` </br> 
 > `docker build -t fastapi-image-embeddings .` (may take a few mintes) </br>
 > `docker run -p 8080:8080 fastapi-image-embeddings` (port 8080 is exposed) </br> 
 Docker container that returns image embeddings is now running.

@@ -5,6 +5,7 @@ import numpy as np
 from tabulate import tabulate
 
 
+## Initialization 
 parser = argparse.ArgumentParser("Semantic similarity analysis.")
 parser.add_argument("--images_folder", default="images", help="path to all images")
 parser.add_argument("--ref_image", default="cat.png", help="The reference image name")
@@ -31,6 +32,7 @@ def cosine_similarity(v1, v2):
     norm_v2 = np.linalg.norm(v2)
     return dot_product / (norm_v1 * norm_v2)
 
+# Generate similarity scores between all images and reference. 
 ref_embedding = embeddings[args.ref_image]
 ref_embedding = np.array(ref_embedding)
 similarities = {}
@@ -38,7 +40,7 @@ for key, embedding in embeddings.items():
     if key != args.ref_image:
         sim = cosine_similarity(ref_embedding, embedding)
         similarities[key] = sim
-sorted_similarities = sorted(similarities.items(), key=lambda item: item[1])[::-1]
+sorted_similarities = sorted(similarities.items(), key=lambda item: item[1])[::-1] # Sort based on highest similarity
 
 
 ## Display top 10 similar results
