@@ -22,18 +22,22 @@ The project is split into 2 components: </br>
 * torch==2.2.1
 * torchvision==0.17.1
 * tabulate==0.9.0
+* requests==2.31.0
+* argparse
+* glob
 
-Or run `pip install -r requirements.txt` </br> 
 
 ## Installation
 
 ### FastAPI Web Service
 FastAPI is run on docker. To create docker image and run docker container, run the following command lines: </br> 
+> `cd app`
 > `docker build -t fastapi-image-embeddings .` (may take a few mintes) </br>
 > `docker run -p 8080:8080 fastapi-image-embeddings` (port 8080 is exposed) </br> 
+Docker container that returns image embeddings is now running.
 
 ### Image Similarity Analysis
-To compute similarity against reference image, run the following commands: </br> 
+To compute similarity against reference image, run the following commands in the main directory (Image-Embedding-and-Semantic-Similarity-Web-API/): </br> 
 
 [OPTIONAL] Create virtual environment for libraries
 > `python -m venv venv` </br> 
