@@ -33,7 +33,14 @@ FastAPI is run on docker. To create docker image and run docker container, run t
 > `docker run -p 8080:8080 fastapi-image-embeddings` (port 8080 is exposed) </br> 
 
 ### Image Similarity Analysis
-To compute similarity against reference image, run the following command: </br> 
+To compute similarity against reference image, run the following commands: </br> 
+
+[OPTIONAL] Create virtual environment for libraries
+> `python -m venv venv` </br> 
+> `venv\Scripts\activate.bat` (For windows) </br> 
+> `source venv/bin/activate` (For Linux) </br> 
+
+Install requirements and run similarity analysis </br> 
 > `pip install -r requirements.txt` </br> 
 > `python similarity_analysis.py` </br>
 
