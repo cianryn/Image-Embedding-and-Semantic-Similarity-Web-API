@@ -11,7 +11,7 @@ parser.add_argument("--images_folder", default="images", help="path to all image
 parser.add_argument("--ref_image", default="cat.png", help="The reference image name")
 args = parser.parse_args(args=[])
 
-url = 'http://0.0.0.0:8080/upload-images/' # The URL of the FastAPI endpoint 
+url = 'http://localhost:8080/upload-images/' # The URL of the FastAPI endpoint 
 image_paths = glob(args.images_folder + "/*") # Paths to the image files 
 files = [('files', (open(image_path, 'rb'))) for image_path in image_paths] # Prepare files in requests format
 response = requests.post(url, files=files) # Send the POST request with the image files

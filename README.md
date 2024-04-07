@@ -40,6 +40,7 @@ Docker container that returns image embeddings is now running.
 ### Image Similarity Analysis
 To compute similarity against reference image, run the following commands in the main directory (Image-Embedding-and-Semantic-Similarity-Web-API/): </br> 
 
+In a separate terminal to the instructions above, run the following:
 [OPTIONAL] Create virtual environment for libraries
 > `python -m venv venv` </br> 
 > `venv\Scripts\activate.bat` (For windows) </br> 
