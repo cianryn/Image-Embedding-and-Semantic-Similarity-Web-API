@@ -9,7 +9,7 @@ from tabulate import tabulate
 parser = argparse.ArgumentParser("Semantic similarity analysis.")
 parser.add_argument("--images_folder", default="images", help="path to all images")
 parser.add_argument("--ref_image", default="cat.png", help="The reference image name")
-args = parser.parse_args(args=[])
+args = parser.parse_args()
 
 url = 'http://localhost:8080/upload-images/' # The URL of the FastAPI endpoint 
 image_paths = glob(args.images_folder + "/*") # Paths to the image files 
